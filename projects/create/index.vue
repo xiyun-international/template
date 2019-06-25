@@ -9,8 +9,11 @@
                     <el-option value="">请选择</el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="上传照片：" prop="imageUrl">
-                <pic-upload :action="uploadUrl" @input="sendPicurl"></pic-upload>
+            <el-form-item label="性别：" prop="age">
+                <el-radio-group v-model="form.age">
+                    <el-radio :label="1">男</el-radio>
+                    <el-radio :label="2">女</el-radio>
+                </el-radio-group>
             </el-form-item>
 
             <el-row>
@@ -30,8 +33,6 @@
 </template>
 
 <script>
-import PicUpload from '../components/pic-upload.vue';
-
 export default {
     name: 'template-create',
     data() {
@@ -41,22 +42,9 @@ export default {
                 status: '',
                 imageUrl: '',
             },
-
-            // 上传地址
-            uploadUrl: '/v1/imageUpload',
         }
     },
-    components: {
-        PicUpload,
-    },
     methods: {
-        /**
-         *  发送图片url
-         */
-        sendPicurl(url) {
-            this.form.imageUrl = url;
-        },
-
         /**
          *  点击提交
          */
