@@ -1,17 +1,19 @@
 <template>
     <div>
         <xy-title>详情</xy-title>
-        <el-form ref="form" :model="form" label-width="120px">
-            <el-form-item label="名称：" prop="name">
-                <span>{{ form.name }}</span>
-            </el-form-item>
-            <el-form-item label="状态：" prop="status">
-                <span>{{ form.status }}</span>
-            </el-form-item>
-            <el-form-item label="图片" prop="imageUrl">
-                <img :src="form.imageUrl" alt="">
-            </el-form-item>
-        </el-form>
+        <xy-wrapper>
+            <el-form ref="form" :model="form" label-width="120px">
+                <el-form-item label="名称：" prop="name">
+                    <span>{{ form.name }}</span>
+                </el-form-item>
+                <el-form-item label="状态：" prop="status">
+                    <span>{{ form.status }}</span>
+                </el-form-item>
+                <el-form-item label="图片" prop="imageUrl">
+                    <img :src="form.imageUrl" alt="">
+                </el-form-item>
+            </el-form>
+        </xy-wrapper>
     </div>
 </template>
 
