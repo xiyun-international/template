@@ -55,20 +55,11 @@
 </template>
 
 <script>
-const defaultForm = {
-    suplierName: '',
-    caterName: '',
-    status: '',
-    payChannel: '',
-    canteenName: '',
-    canteenType: '',
-}
-
 export default {
     name: 'search-form',
     data() {
         return {
-            form: { ...defaultForm },
+            form: {},
         }
     },
     methods: {

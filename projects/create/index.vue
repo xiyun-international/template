@@ -38,11 +38,7 @@ export default {
     name: 'template-create',
     data() {
         return {
-            form: {
-                name: '',
-                status: '',
-                age: '',
-            },
+            form: {},
         }
     },
     methods: {
