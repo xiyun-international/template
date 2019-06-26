@@ -37,20 +37,33 @@ export default {
     name: 'template-create',
     data() {
         return {
-            form: {
-                name: '',
-                status: '',
-                age: '',
-            },
+            form: {},
+
+            // 获取路由中的id值
+            id: this.$route.params.id,
         }
     },
+    created() {
+        this.getDetailList();
+    },
     methods: {
+        /**
+         *  获取详情信息
+         */
+        getDetailList() {
+            this.$post('/v1/detail', { id: this.id }).then(res => {
+                if (res.code === 10000) {
+                    this.form = res.bizContent.resultList;
+                }
+            })
+        },
+
         /**
          *  点击提交
          */
         onSubmit() {
             const params = this.form
-            this.$post('/v1/save', params).then(res => {
+            this.post('/v1/save', params).then(res => {
                 if (res.code === 200) {
                     this.$message({
                         type: 'success',
@@ -73,4 +86,3 @@ export default {
     },
 }
 </script>
-

@@ -4,13 +4,13 @@
         <xy-wrapper>
             <search-form @onSearch="onSearch"></search-form>
         </xy-wrapper>
-        <div class="mt-24">
+        <div class="t-MT28">
             <router-link to="/create">
                 <el-button type="primary">创建</el-button>
             </router-link>
             <el-button type="default">导出 Excal</el-button>
         </div>
-        <xy-wrapper class="mt-24">
+        <xy-wrapper class="t-MT28">
             <el-table ref="table" :data="tableData" style="width: 100%">
                 <el-table-column label="姓名">
                     <template>
@@ -38,7 +38,7 @@
             </el-table>
         </xy-wrapper>
 
-        <div class="mt-28" style="text-align: right">
+        <div class="t-MT28">
             <el-pagination
               @current-change="handleCurrentChange"
               @size-change="handleSizeChange"
