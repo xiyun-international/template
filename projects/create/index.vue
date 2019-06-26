@@ -1,5 +1,6 @@
 <template>
     <div>
+        <xy-title>创建</xy-title>
         <el-form ref="form" :model="form" label-width="120px">
             <el-form-item label="名称：" prop="name">
                 <el-input placeholder="请输入名称" v-model="form.name"></el-input>
