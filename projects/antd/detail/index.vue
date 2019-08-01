@@ -11,7 +11,7 @@
     <a-form :form="form">
       <a-row>
         <a-col v-bind="searchCol">
-          <a-form-item v-bind="searchItem" label="编号：" props="apply_name">
+          <a-form-item v-bind="searchItem" label="编号：">
             {{ form.apply_name }}
           </a-form-item>
         </a-col>
@@ -31,7 +31,7 @@
     <a-form :form="form">
       <a-row>
         <a-col v-bind="searchCol">
-          <a-form-item v-bind="searchItem" label="申请人：" props="apply_name">
+          <a-form-item v-bind="searchItem" label="申请人：">
             {{ form.apply_name }}
           </a-form-item>
         </a-col>

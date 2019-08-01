@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import SearchForm from './form/index.vue';
+import SearchForm from './form/search.vue';
 
 export default {
   name: 'listDemo',
